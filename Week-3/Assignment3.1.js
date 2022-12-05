@@ -12,16 +12,16 @@ function memoize(fn) {
 
 
 }
-function square(a) {
-    console.log("Calculating Value -")
-    return a * a;
+function add(a) {
+    console.log("Calculating Value-")
+    return a + a;
 }
 
-const squareM = memoize(square);
+const addM = memoize(add);
 
-console.log(squareM(10));
-console.log(squareM(20));
-console.log(squareM(10));
-console.log(squareM(20));
-console.log(squareM(30));
-console.log(squareM(30));
+console.log(addM(10));
+console.log(addM(10));
+console.log(addM(20));
+console.log(addM(20));
+console.log(addM(30));
+console.log(addM(30));
