@@ -13,7 +13,7 @@ function memoize(fn) {
 
 }
 function add(a) {
-    console.log("Calculating Value-")
+    console.log("Calculating Value:")
     return a + a;
 }
 
