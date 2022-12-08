@@ -8,6 +8,7 @@ function memoize(fn) {
         }
         cache.set(key, fn(n));
         return cache.get(key);
+
     };
 
 
@@ -18,7 +19,6 @@ function add(a) {
 }
 
 const addM = memoize(add);
-
 console.log(addM(10));
 console.log(addM(10));
 console.log(addM(20));
