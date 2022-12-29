@@ -1,0 +1,26 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function isVowel(char) {
+            return 'aAeEiIoOuU'.includes(char);
+        }
+        function vowelcount(string) {
+            const vowelMap = new Map();
+            var Vowels = 'aAeEiIoOuU';
+            for (var i = 0; i < string.length; i++) {
+                let x = string.charAt(i);
+                if (isVowel(x)) {
+                    if (vowelMap.has(x)) vowelMap.set(x, vowelMap.get(x) + 1);
+                    else vowelMap.set(x, 1);
+                }
+            }
+            return vowelMap;
+        }
+        console.log(isVowel("Divyabharathi Mayavan"));
+    </script>
+</body>
+
+</html>
