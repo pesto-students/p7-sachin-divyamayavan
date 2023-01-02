@@ -1,0 +1,130 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>week-3</title>
+    <h2>What is the output of the below problem and why:</h2>
+    <style>
+        body {
+            background-color: lightpink;
+            margin: 100px 100px 80px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <p><b>Problem:</b></p>
+    <p>
+        function createIncrement() {<br>
+        let count=0;<br>
+        function increment() {<br>
+        count++;<br>
+        }<br>
+        let message=`Count is${count}`;<br>
+        function log() {<br>
+        console.log(message);<br>
+        }<br>
+        return [increment,log];<br>
+        }<br>
+        const [increment,log] = createIncrement();<br>
+        increment();<br>
+        increment();<br>
+        increment();<br>
+        log();<br>
+    </p>
+    <p><b>Output:</b></p>
+    <table>
+        <script>
+            function createIncrement() {
+                let count = 0;
+
+                function increment() {
+                    count++;
+                }
+
+                let message = `Count is ${count}`;
+                function log() {
+                    document.write(message);
+                }
+
+                return [increment, log];
+            }
+
+            const [increment, log] = createIncrement();
+
+            increment();
+            increment();
+            increment();
+            log();
+        </script>
+    </table>
+
+    <p><b>Explanation:</b></p>
+    <p>let count = 0;<br>
+        let message = count;<br>
+        console.log(message);<br>
+        count++; <br>
+        console.log(message); <b>// still prints 0</b>
+    </p>
+    <ul style="width: 50%;">
+        <li>This has nothing to do with closures, and everything to do about numbers being immutable values. When we
+            increment count we are assigning to the variable a new instance of a number with the value 1. message is
+            still pointing to the old instance (value, in this case it's the same), so the log is going to print the
+            same old value.</li><br>
+        <li>It is a pointer to a numeric and immutable value, that sits in memory somewhere. When you do message = count
+            you ensure message and count are pointing to the same memory address, that contains a 0.</li>
+    </ul>
+    <p><b>Example 1:</b></p>
+    <p>function createIncrement() {<br>
+        let count = 0;<br><br>
+
+        function increment() {<br>
+        count++;<br>
+        }<br><br>
+
+        function log() {<br>
+        let message = count;<br>
+        console.log(message);<br>
+        }<br><br>
+
+        return [increment, log];<br>
+        }<br><br>
+
+        const [increment, log] = createIncrement();<br><br>
+
+        increment();<br>
+        log();<br>
+    </p>
+    <p><b>Output:</b></p>
+    <table>
+        <script>
+            function createIncrement1() {
+                let count = 0;
+
+                function increment1() {
+                    count++;
+                }
+
+                function log1() {
+                    let message = count;
+                    document.write(message);
+                }
+
+                return [increment1, log1];
+            }
+
+            const [increment1, log1] = createIncrement1();
+
+            increment1();
+            log1();
+
+        </script>
+    </table>
+    <p><b>Explanation:</b></p>
+    <p>In this example code referes to the "message is reassigned every time you log, so it will always hold a reference
+        to the correct value."</p>
+</body>
+
+</html>
