@@ -6,7 +6,7 @@ function maxProfit(prices, n) {
         if (buy > prices[i])
             buy = prices[i];
 
-        // Checking for higher profit
+        // Checking for higher profit value
         else if (prices[i] - buy > max_profit)
             max_profit = prices[i] - buy;
     }
