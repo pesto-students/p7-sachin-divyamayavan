@@ -1,0 +1,80 @@
+body {
+    background-image: url(https://res.cloudinary.com/stepzen/image/upload/w_823/v1624999578/covers/cover15_kfbuwa.jpg);
+    min-height: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: cursive;
+    text-align: center;
+    font-size: 130%;
+}
+
+
+.container {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    min-height: 500px;
+    min-width: 500px;
+    background-color: blueviolet;
+    background-size: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px black;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.heading>h1 {
+    padding: 0.2rem 1.5rem;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+form>input {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 10px;
+    border-top-right-radius: 10px 3px;
+    border-bottom-left-radius: 3px 10px;
+    border: 1px solid transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: black;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+
+button {
+    padding: 0%;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: dashed;
+    padding-bottom: 2px;
+    border-radius: 3px;
+    background-color: green;
+}
+
+button>span {
+    background-color: green;
+    display: block;
+    padding: 5% 8%;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+li {
+    text-align: left;
+    position: relative;
+    padding: auto;
+}
