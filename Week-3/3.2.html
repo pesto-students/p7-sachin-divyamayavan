@@ -1,0 +1,271 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEEK-3</title>
+    <style>
+        body {
+            background-color: lightgreen;
+            margin: 25px 50px 75px 100px;
+            font-size: x-large;
+        }
+
+        .table1 {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .table2 {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .table3 {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .table4 {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Create 3 simple functions where call, bind and apply are used. The intention of this exercise isto understand
+        how they work and their differences.</h2>
+    <h3>
+        <b>Call() Method</b><br>
+    </h3>
+    <p><b>Definition:</b></p>
+
+    <p>The call method is basically used to invoke the function with different this object.
+        In JavaScript, this refers to an object. It depends on how we are calling a particular function. In the global
+        scope, this refers to the global object window. Inside function also this refers to the global object window.
+    </p>
+    <p>
+        In strict mode, when we use any function then this refers to undefined. In functions like call, this could refer
+        to a different object. With the help of the call method, we can invoke a particular function with different
+        objects.
+    </p>
+    <p><b>Syntax: [object.objectMethod.call( objectInstance, arguments )]</b></p>
+    <p>Parameters: It takes two parameters</p>
+    <ul>
+        <li>ObjectInstance: It is an object which we want to use explicitly</li>
+        <li>Arguments: It is arguments that we want to pass to the calling function</li>
+    </ul>
+    <p><b>Example:call() Method</b></p>
+    <p class="table1">
+        let object1 = {<br>
+        firstName: "Divyabharathi",<br>
+        lastName: "Mayavan"<br>
+        };<br><br>
+        let obj2 = {<br>
+        firstName: "Sountharaya",<br>
+        lastName: "Manivannan"<br>
+        };<br><br>
+        function FullName(profession, country) {<br>
+        document.write(this.firstName + " "<br>
+        + this.lastName + " " +<br>
+        profession + " " + country);<br>
+        }<br>
+        FullName.<b>call</b>(object1, "Full stack developer", "India");
+    </p>
+    <p><b>Output:</b></p>
+    <table>
+        <tr>
+            <script>
+                let object1 = {
+                    firstName: "Divyabharathi",
+                    lastName: "Mayavan"
+                };
+                let obj2 = {
+                    firstName: "Sountharaya",
+                    lastName: "Manivannan"
+                };
+                function FullName(profession, country) {
+                    document.write(this.firstName + " "
+                        + this.lastName + " " +
+                        profession + " " + country);
+                }
+                FullName.call(object1, "Full stack developer", "India");
+            </script>
+
+        </tr>
+    </table>
+
+    <p><b>Apply() method:</b></p>
+    <p><b>Definition:</b></p>
+    <p>Just like the call method we can also bind the function to any object. Using apply( ) method also we can invoke a
+        given function with different objects.</p>
+    <p><b>Syntax: [object.objectMethod.apply(objectInstance, arrayOfArguments)]</b></p>
+    <p>Parameters: It takes two parameters:</p>
+    <ul>
+        <li>ObjectInstance: It is an object which we want to use explicitly</li>
+        <li>Arguments: It is arguments that we want to pass to the calling function</li>
+    </ul>
+    <p><b>Example of apply() Method:</b></p>
+    <p class="table2">
+        var objj = {<br>
+        firstName: "Divyabharathi",<br>
+        lastName: "Mayavan"<br>
+        };<br><br>
+        var objj2 = {<br>
+        firstName: "Sountharaya",<br>
+        lastName: "Manivannan"<br>
+        };<br><br>
+        function FullName(Month, Year) {<br>
+        document.write(this.firstName + " "<br>
+        + this.lastName + " " +<br>
+        Month + " " + Year);<br>
+        }<br><br>
+        FullName.<b>apply</b>(objj, ["December", "1999"]);
+    </p>
+    <p><b>Output:</b></p>
+    <table>
+        <tr>
+            <script>
+                var objj = {
+                    firstName: "Divyabharathi",
+                    lastName: "Mayavan"
+                };
+                var objj2 = {
+                    firstName: "Sountharaya",
+                    lastName: "Manivannan"
+                };
+                function FullName(Month, Year) {
+                    document.write(this.firstName + " "
+                        + this.lastName + " " +
+                        Month + " " + Year);
+                }
+                FullName.apply(objj, ["December", "1999"]);
+            </script>
+
+        </tr>
+    </table>
+    <p><b>bind() Method</b></p>
+    <p><b>Definition:</b></p>
+    <p>
+        Bind() method to call a function with the this value, this keyword refers to the same object which is currently
+        selected . In other words, bind() method allows us to easily set which object will be bound by the this keyword
+        when a function or method is invoked.
+    </p>
+    <p>The need for bind usually occurs, when we use the this keyword in a method and we call that method from a
+        receiver object, then sometimes this is not bound to the object that we expect to be bound to. This results in
+        errors in our program.
+    </p>
+    <p>Example:</p>
+    <p><b>Default binding method</b></p>
+    <p class="table3">let obj = {<br>
+        name: "Divyabharathi",<br>
+        Myname: function () {<br>
+        document.write(this.name);<br>
+        }<br>
+        }<br>
+        obj.Myname();</p>
+    <p><b>Output:</b></p>
+    <table>
+        <tr>
+            <script>
+                let obj = {
+                    name: "Divyabharathi",
+                    Myname: function () {
+                        document.write(this.name);
+                    }
+                }
+
+                obj.Myname();
+            </script>
+        </tr>
+    </table>
+    <p><b>Without Using bind() Method:</b></p>
+    <p>
+        var obj1 = {<br>
+        name: "Divyabharathi Mayavan",<br>
+        FullName: function () {<br>
+        document.write(this.name);<br>
+        }<br>
+        }<br>
+
+        var MyName2 = obj1.FullName;<br>
+        MyName2();<br>
+    </p>
+    <p><b>Output:</b></p>
+    <table>
+        <tr>
+            <script>
+                var obj1 = {
+                    name: "Divyabharathi Mayavan",
+                    FullName: function () {
+                        document.write(this.name);
+                    }
+                }
+
+                var MyName2 = obj1.FullName;
+                MyName2();
+            </script>
+        </tr>
+    </table>
+    <p>//no output is produced by this code//</p>
+    <p><b>Explanation of using bind() method:</b></p>
+    <p class="table4">
+        var obj3 = {<br>
+        name: "Divyabharathi Mayavan",<br>
+        FullName: function () {<br>
+        document.write(this.name);<br>
+        }<br>
+        }<br>
+        var FullName2 = obj3.FullName.<b>bind</b>(obj3);<br>
+        FullName2();<br>
+    </p>
+    <p><b>Output:</b></p>
+    <table>
+        <tr>
+            <script>
+                var obj3 = {
+                    name: "Divyabharathi Mayavan",
+                    FullName: function () {
+                        document.write(this.name);
+                    }
+                }
+
+                var FullName2 = obj3.FullName.bind(obj3);
+                FullName2();
+            </script>
+        </tr>
+    </table>
+    <p><b>Difference between call() and apply() method:</b></p>
+    <table>
+        <tr>
+            <td>
+                <b>call() Method</b><br><br>
+                <table>
+                    <tr>It is used to write such a method that can be used on different objects.</tr><br><br>
+                    <tr>It is a Predefined Method in Javascript.</tr><br><br>
+                    <tr>It is used for an object to use a method that belongs to a different object.</tr><br><br>
+                    <tr>This method can also accepts parameters.</tr><br><br>
+                </table><br>
+            </td>
+            <td>
+                <b>apply() Method</b><br><br>
+                <table>
+                    <tr>It is used to write methods, which can be used on different objects</tr><br><br>
+                    <tr>Its return value is the result of the calling function along provided this value and arguments.
+                    </tr><br><br>
+                    <tr>We can use a list with this function instead of the array</tr><br><br>
+                    <tr> This method takes parameter as an array</tr><br><br>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

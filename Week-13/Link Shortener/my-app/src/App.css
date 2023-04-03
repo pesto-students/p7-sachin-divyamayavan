@@ -1,0 +1,116 @@
+.container{
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:azure;
+}
+
+.inputContainer div{
+display:flex;
+margin-bottom: 2rem;
+}
+
+.inputContainer input{
+  width: 100%;
+  padding: 0.5rem 15rem;
+  text-indent: 1 rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: rgba(137, 43, 226, 0.522);
+}
+
+.inputContainer input::placeholder{
+  font-size: 1rem;
+  color:black;
+}
+
+.inputContainer button{
+  padding: 0 1rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color:white;
+  background-color: green;
+  border:none;
+  cursor: pointer;
+}
+
+.result{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  }
+
+  .result p{
+    color: black;
+    border: 2px solid black;
+    padding: 0.5rem 14rem;
+    margin-right: 1rem;
+  }
+
+  .result button{
+    padding: 0.5rem 1rem;
+    color:white;
+    cursor: pointer;
+    background-color: green;
+    border: 2px solid black;
+  }
+
+  .result button.copied{
+    background-color:white;
+    color: black;
+  }
+
+  .noData {
+    color: black;
+    font-size: 1rem;
+  }
+
+  .footer {
+    background-color:black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+
+ .table{
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+ }
+
+ th{
+  height: 50px;
+ }
+
+.headertable{
+  width: 100%;
+}
+.diffcolor{
+  color: blue;
+}
+.color{
+  color: black;
+}
+
+.highlight{
+  font-size: 3rem;
+}
+
+.highlight2{
+  font-size: 1.5rem;
+}
+
+.tablealign{
+  text-align: left; 
+}
