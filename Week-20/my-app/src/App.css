@@ -1,0 +1,169 @@
+body{
+ background: url('./Images/Main.png');
+ background-size: cover;
+ margin: auto;
+ padding: 0px;
+ font-family: sans-serif;
+  
+}
+
+.heading {
+  text-align: center;
+}
+
+.panel {
+  width: 100%;
+  margin-top: 40em;
+}
+
+.panel .p-left {
+  width: 300px;
+  height: 70px;
+  background: linear-gradient(#eff1f0, #c1c2c4, #a1a4a7);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  float:left;
+}
+
+.panel .p-left img{
+  width:25%;
+  float: right;
+  padding: 10px 32px 0px 0px;
+}
+
+
+.panel .p-mid {
+  width: 875px;
+  height: 70px;
+  background: linear-gradient(#eff1f0, #c1c2c4, #a1a4a7); 
+  border-radius: 50px;
+  float: left;
+}
+
+.panel .p-mid img {
+  width:10px;
+  padding: 13px 0px 0px 60px;
+}
+
+.panel .p-mid p{
+  color: #2a2d6e;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -20px;
+  padding: 1px 0px 10px 71px;
+}
+
+.panel .p-mid .players{
+  float: left;
+}
+
+.panel .p-mid .run{
+  float:left;
+  padding-top: 33px;
+}
+
+.panel .p-mid .ining{
+  background: #1e216f;
+  width: 300px;
+  border-radius: 50px;
+  height:67px;
+  margin: 1.5px 0px 0px 60px;
+  float: left;
+}
+
+.panel .p-mid .ining p{
+  padding: 30px 0px 0px 22px;
+  font-size: 20px;
+  font-weight: 600;
+  color:#eff1f0;
+}
+
+#india {
+  font-weight: bold;
+  color:#fff;
+  font-size: 22px;
+}
+
+#run-wicket {
+  color:#fff;
+  font-size: 22px;
+  background: linear-gradient(to right, rgba(133,29,82,.0), #e31857);
+  padding: 2px 10px 2px 40px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: -20px;
+  font-weight: bold;
+}
+
+#P2 {
+  color:#fff;
+  font-size: 18px;
+  background: linear-gradient(to right, rgba(32,67,138,.0), #378bd0);
+  padding: 6px 10px 1px 15px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+
+#over {
+  padding-left: 10px;
+  font-weight: normal;
+  }
+
+  #match {
+    color: #fff;
+    font-size: 12px;
+    padding-left: 65px;
+    letter-spacing: 1px;
+  }
+
+.balls {
+  float:left;
+  padding-top: 35px;
+  margin-left: -50px;
+  letter-spacing: 1px;
+}
+
+.circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #262239;
+  float: left;
+  border-radius: 50px;
+  margin: -8px 1.3px;
+}
+
+.move{
+  padding-left: 60px;
+  margin-top: -10px;
+}
+
+#ball-left{
+  float: left;
+  margin: 35px 0px 0px -30px;
+  font-size: 22px;
+}
+
+.panel .p-left:hover, .panel .p-right:hover{
+  background: linear-gradient(#e31857, #1e216f);
+}
+
+.panel .p-mid p:hover{
+  color:#e31857;
+  cursor: pointer;
+}
+
+.panel .p-right {
+  width:300px;
+  height: 70px;
+  background: linear-gradient(#eff1f0, #c1c2c4, #a1a4a7);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  float:left;
+
+}
+.panel .p-right img{
+  width: 30%;
+  padding: 14px 0px 0px 30px;
+}
